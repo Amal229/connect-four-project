@@ -7,3 +7,9 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
+header {
+  background-color: rgba(17, 17, 11, 0.274);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
