@@ -36,7 +36,7 @@
 
 ##### image header 1
 
-![Home](./home.png)
+![Home](./home.jpg)
 
 ##### image header 2
 
