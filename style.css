@@ -1,1 +1,36 @@
+body {
+  height: 100vh;
+  margin: 0px auto;
+  background-image: url(./preview.jpg);
+  text-align: center;
+}
+header {
+  background-color: rgba(236, 230, 222, 0.966);
+  height: 400px;
+  padding: 5px;
+  margin-top: 100px;
+  border-bottom: solid rgb(23, 35, 105) 12px;
+  border-top: solid rgb(23, 35, 105) 12px;
+}
 
+h1 {
+  font-family: 'Frijole', system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150px;
+  color: rgb(0, 0, 0);
+}
+.pink {
+  color: rgb(64, 185, 16);
+}
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: purple;
+}
+.orange {
+  color: orange;
+}
