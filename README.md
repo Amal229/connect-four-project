@@ -34,13 +34,14 @@
 
 ### **_Screenshots_**
 
-##### image header 1
+##### Home Page
 
 ![Home](./home.jpg)
 
-##### image header 2
+##### Game page
 
-![Scared](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.buntINTHFLyDODyMKXNYcgHaEK%26pid%3DApi&f=1)
+![Game1](./game1.jpg)
+![Game1](./game2.jpg)
 
 ---
 
