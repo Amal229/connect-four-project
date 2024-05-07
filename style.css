@@ -95,3 +95,6 @@ button:hover {
 .instruction {
   font-size: 60px;
 }
+p {
+  font-weight: bold;
+}
