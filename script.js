@@ -1,38 +1,35 @@
 // Global variables
-const startButton = document.querySelector('#start') //variable to store start button
-const resetButton = document.querySelector('#reset') //variable to store reset button
-let player1 = 'Player 1' //initialize the player 1
-let player2 = 'Player 2' //initialize the player 2
-let currentPlayer //initialize the current player
-const cells = document.querySelectorAll('.board .cell') //select all cells in board
-let cell //initialize single cell
-let win = false //initialize boolean
+const cells = document.querySelectorAll('.board .cell')
+let player1 = 'Player 1'
+let player2 = 'Player 2'
+let currentPlayer
+let cell
+let win = false
 let v = document.querySelector('#winner')
 let c = document.querySelector('#current')
+const startButton = document.querySelector('#start')
+const resetButton = document.querySelector('#reset')
 c.innerText = 'Click Start Now!'
-
 // Functions
 function startGame() {
-  currentPlayer = player1 //assume that current player is player 1
+  c.innerText = 'Player 1 vs Player 2'
+  currentPlayer = player1
   for (let i = 0; i < cells.length; i++) {
-    //loop through cells
     cells[i].addEventListener('click', () => {
-      cell = cells[i] //each single cell
+      cell = cells[i]
 
       if (
         (i >= 35 || cells[i + 7].style.backgroundColor !== '') &&
         cell.style.backgroundColor === ''
       ) {
-        if (cell.style.backgroundColor == '') {
+        if (cell.style.backgroundColor == '' && !win) {
           if (currentPlayer === player1) {
-            //set current player cell color to red
             cell.style.backgroundColor = 'red'
 
-            currentPlayer = player2 //change current player to be the player 2
+            currentPlayer = player2
           } else if (currentPlayer === player2) {
-            //if current player is equal to player 2 ,set the cell color to yellow
             cell.style.backgroundColor = 'yellow'
-            currentPlayer = player1 //change the current player to player 1
+            currentPlayer = player1
           }
         }
       }
@@ -40,7 +37,6 @@ function startGame() {
     })
   }
 }
-//check win conditions
 function checkWin() {
   for (let i = 0; i < cells.length; i++) {
     if (
@@ -901,6 +897,21 @@ function checkWin() {
   }
 }
 
+function resetGame() {
+  c.innerText = 'Player 1 vs Player 2'
+  v.innerText = ''
+  win = false
+  for (let i = 0; i < cells.length; i++) {
+    if (cell.style.backgroundColor === 'yellow' && currentPlayer === player2) {
+      cell.style.backgroundColor === 'red'
+      currentPlayer = player1
+    }
+    if (cell.style.backgroundColor != null) {
+      cells[i].style.backgroundColor = ''
+    }
+  }
+}
+
 // Event listeners
-startButton.addEventListener('click', startGame) //event listener to click on start
-resetButton.addEventListener('click', resetGame) //event listener to click on reset
+startButton.addEventListener('click', startGame)
+resetButton.addEventListener('click', resetGame)
