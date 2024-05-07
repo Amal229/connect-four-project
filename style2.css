@@ -19,3 +19,17 @@ header {
   font-size: 90px;
   color: rgb(0, 0, 0);
 }
+.pink {
+  color: rgb(64, 185, 16);
+}
+
+.blue {
+  color: blue;
+}
+
+.purple {
+  color: purple;
+}
+.orange {
+  color: orange;
+}
