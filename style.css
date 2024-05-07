@@ -12,7 +12,20 @@ header {
   border-bottom: solid rgb(23, 35, 105) 12px;
   border-top: solid rgb(23, 35, 105) 12px;
 }
-
+.container {
+  background-color: rgba(245, 243, 239, 0.719);
+  margin-top: 90px;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+footer {
+  height: 10%;
+  background-color: rgba(245, 245, 220, 0.849);
+  margin-top: 100px;
+}
 h1 {
   font-family: 'Frijole', system-ui;
   font-weight: 400;
@@ -20,6 +33,47 @@ h1 {
   font-size: 150px;
   color: rgb(0, 0, 0);
 }
+#img {
+  margin-top: 300px;
+  width: 55vh;
+  height: 45vh;
+  border: 5px solid rgb(20, 20, 61);
+  border-radius: 20px;
+}
+button {
+  background-color: rgba(60, 196, 7, 0.849);
+
+  border-radius: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  border: 8px solid rgba(0, 0, 0, 0.637);
+  margin: 70px;
+  font-family: fantasy;
+  padding: 10px;
+  width: 50%;
+
+  letter-spacing: 7px;
+}
+button:hover {
+  background-color: rgb(111, 241, 5);
+  border: 9px solid black;
+}
+#play {
+  height: 200px;
+}
+#play:hover {
+  height: 220px;
+}
+.box1 {
+  width: 40%;
+}
+.box2 {
+  background-color: rgba(245, 219, 186, 0.849);
+  width: 60%;
+  border: 30px solid rgb(17, 16, 16);
+  border-radius: 20px;
+}
+
 .pink {
   color: rgb(64, 185, 16);
 }
@@ -33,4 +87,11 @@ h1 {
 }
 .orange {
   color: orange;
+}
+
+.cell {
+  background-color: yellow;
+}
+.instruction {
+  font-size: 60px;
 }
