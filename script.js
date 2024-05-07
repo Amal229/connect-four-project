@@ -1,43 +1,55 @@
 // Global variables
-const cells = document.querySelectorAll('.board .cell')
-let player1 = 'Player 1'
+const cells = document.querySelectorAll('.board .cell') //select the cells on board
+let player1 = 'Player 1' //assign name of players
 let player2 = 'Player 2'
-let currentPlayer
-let cell
-let win = false
-let v = document.querySelector('#winner')
-let c = document.querySelector('#current')
-const startButton = document.querySelector('#start')
-const resetButton = document.querySelector('#reset')
-c.innerText = 'Click Start Now!'
+let currentPlayer //initialize current player
+let cell //initialize the current cell
+let win = false //boolean to check if player won
+let v = document.querySelector('#winner') //selector to display winner messege
+let c = document.querySelector('#current') //display mesage
+const startButton = document.querySelector('#start') //selec the start button
+const resetButton = document.querySelector('#reset') //select reset button
+c.innerText = 'Click Start Now!' //display message before start game
+
 // Functions
 function startGame() {
-  c.innerText = 'Player 1 vs Player 2'
-  currentPlayer = player1
+  c.innerText = 'Player 1 vs Player 2' //display message after start game
+  currentPlayer = player1 //first set current player to player 1
   for (let i = 0; i < cells.length; i++) {
+    //loop through cells
     cells[i].addEventListener('click', () => {
-      cell = cells[i]
+      //add event listener for each cell
+      cell = cells[i] //each cell will have index ,assigning current cell to cell variable
 
       if (
         (i >= 35 || cells[i + 7].style.backgroundColor !== '') &&
         cell.style.backgroundColor === ''
       ) {
+        //check each cell in the bottom of current cell are filled and the current cell is equal to null it will excute the inner code
+        //check if the current cell position is in the bottom row it wll set color player value
+        //or if the bellow cells of each is colored and the current cell is null not colored it will run bellow code
+        //behaviour of dropping down the colored cells
         if (cell.style.backgroundColor == '' && !win) {
+          //if cell is null and true do this
           if (currentPlayer === player1) {
-            cell.style.backgroundColor = 'red'
+            //check if current player is player 1
+            cell.style.backgroundColor = 'red' //if player 1 ,set cell background color to red
 
-            currentPlayer = player2
+            currentPlayer = player2 //replace player 1 t player 2  and set it to current player
           } else if (currentPlayer === player2) {
+            //if the current player i player 2 set the cell background color to yellow
             cell.style.backgroundColor = 'yellow'
-            currentPlayer = player1
+            currentPlayer = player1 //replace the current player from player 2 to player 1 and store it
           }
         }
       }
-      checkWin()
+      checkWin() //this function will check if the player won
     })
   }
 }
 function checkWin() {
+  //check if player won and true it will display message and stop the game
+
   for (let i = 0; i < cells.length; i++) {
     if (
       (cells[35].style.backgroundColor === 'red' &&
@@ -898,20 +910,22 @@ function checkWin() {
 }
 
 function resetGame() {
-  c.innerText = 'Player 1 vs Player 2'
-  v.innerText = ''
-  win = false
+  c.innerText = 'Player 1 vs Player 2' //display message
+  v.innerText = '' //null message
+  win = false //set to false to clear cells
   for (let i = 0; i < cells.length; i++) {
+    //when click on reset the player should start with red again
     if (cell.style.backgroundColor === 'yellow' && currentPlayer === player2) {
       cell.style.backgroundColor === 'red'
       currentPlayer = player1
     }
     if (cell.style.backgroundColor != null) {
+      //if cells not null set the cells color to null
       cells[i].style.backgroundColor = ''
     }
   }
 }
 
 // Event listeners
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame) //make buttons clickable
 resetButton.addEventListener('click', resetGame)
