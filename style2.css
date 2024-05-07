@@ -1,0 +1,9 @@
+body {
+  background-image: url(4872987.jpg);
+  margin: 0;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
