@@ -58,3 +58,15 @@ h1 {
 .cell:hover {
   background-color: rgba(180, 177, 199, 0.829);
 }
+button {
+  height: 100px;
+  width: 300px;
+  font-size: 50px;
+  font-family: fantasy;
+  margin: 10px;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: rgba(134, 134, 134, 0.329);
+  border: 7px solid black;
+}
