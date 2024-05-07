@@ -7,6 +7,7 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
+
 header {
   background-color: rgba(17, 17, 11, 0.274);
   padding: 20px;
@@ -17,6 +18,10 @@ header {
   font-family: 'Frijole', system-ui;
 
   font-size: 90px;
+  color: rgb(0, 0, 0);
+}
+h1 {
+  font-size: 50px;
   color: rgb(0, 0, 0);
 }
 .pink {
@@ -33,10 +38,7 @@ header {
 .orange {
   color: orange;
 }
-h1 {
-  font-size: 50px;
-  color: rgb(0, 0, 0);
-}
+
 .board {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -69,4 +71,9 @@ button {
 button:hover {
   background-color: rgba(134, 134, 134, 0.329);
   border: 7px solid black;
+}
+
+#current,
+#winner {
+  font-size: 80px;
 }
