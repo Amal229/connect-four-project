@@ -14,16 +14,21 @@ function startGame() {
     cells[i].addEventListener('click', () => {
       cell = cells[i] //each single cell
 
-      if (cell.style.backgroundColor == '') {
-        if (currentPlayer === player1) {
-          //set current player cell color to red
-          cell.style.backgroundColor = 'red'
+      if (
+        (i >= 35 || cells[i + 7].style.backgroundColor !== '') &&
+        cell.style.backgroundColor === ''
+      ) {
+        if (cell.style.backgroundColor == '') {
+          if (currentPlayer === player1) {
+            //set current player cell color to red
+            cell.style.backgroundColor = 'red'
 
-          currentPlayer = player2 //change current player to be the player 2
-        } else if (currentPlayer === player2) {
-          //if current player is equal to player 2 ,set the cell color to yellow
-          cell.style.backgroundColor = 'yellow'
-          currentPlayer = player1 //change the current player to player 1
+            currentPlayer = player2 //change current player to be the player 2
+          } else if (currentPlayer === player2) {
+            //if current player is equal to player 2 ,set the cell color to yellow
+            cell.style.backgroundColor = 'yellow'
+            currentPlayer = player1 //change the current player to player 1
+          }
         }
       }
     })
