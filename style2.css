@@ -33,3 +33,28 @@ header {
 .orange {
   color: orange;
 }
+h1 {
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+  background-color: rgb(17, 0, 255);
+  margin: 20px;
+}
+.cell {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  align-items: center;
+  margin: 20px;
+  color: white;
+  border: 7px solid rgb(6, 6, 54);
+}
+.cell:hover {
+  background-color: rgba(180, 177, 199, 0.829);
+}
