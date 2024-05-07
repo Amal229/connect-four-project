@@ -13,3 +13,9 @@ header {
   text-align: center;
   width: 100%;
 }
+#title {
+  font-family: 'Frijole', system-ui;
+
+  font-size: 90px;
+  color: rgb(0, 0, 0);
+}
