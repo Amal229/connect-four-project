@@ -20,6 +20,8 @@
 
 ### **_Getting Started_**
 
+### Process of building connect four
+
 ##### First , Make a two Html Page one for Introducing game and instruction and other for display the game then structuring the lay out using grid.
 
 ##### Second , style the css and layout add more colors and make it nice .
@@ -29,6 +31,16 @@
 ##### Finally, Add final touch .
 
 ##### Test the game .
+
+### Instruction
+
+##### first player to get four of your tokens yellow or red in a row horizontally, vertically, or diagonally on the game board.
+
+##### The game is two player
+
+##### you should click on start game button
+
+##### you can reset your game once player won
 
 ---
 
