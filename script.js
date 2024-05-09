@@ -914,11 +914,6 @@ function resetGame() {
   v.innerText = '' //null message
   win = false //set to false to clear cells
   for (let i = 0; i < cells.length; i++) {
-    //when click on reset the player should start with red again
-    if (cell.style.backgroundColor === 'yellow' && currentPlayer === player2) {
-      cell.style.backgroundColor === 'red'
-      currentPlayer = player1
-    }
     if (cell.style.backgroundColor != null) {
       //if cells not null set the cells color to null
       cells[i].style.backgroundColor = ''
